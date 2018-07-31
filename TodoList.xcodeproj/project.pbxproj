@@ -13,6 +13,7 @@
 		F49258F82110FB8E0055FD92 /* TodoList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F49258F62110FB8E0055FD92 /* TodoList.xcdatamodeld */; };
 		F49258FA2110FB8E0055FD92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49258F92110FB8E0055FD92 /* Assets.xcassets */; };
 		F49258FD2110FB8E0055FD92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F49258FB2110FB8E0055FD92 /* LaunchScreen.storyboard */; };
+		F4925909211105FB0055FD92 /* PersistenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4925908211105FB0055FD92 /* PersistenceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		F49258F92110FB8E0055FD92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F49258FC2110FB8E0055FD92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F49258FE2110FB8E0055FD92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4925908211105FB0055FD92 /* PersistenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		F49258EE2110FB8E0055FD92 /* TodoList */ = {
 			isa = PBXGroup;
 			children = (
+				F4925907211105EB0055FD92 /* services */,
 				F49258EF2110FB8E0055FD92 /* AppDelegate.swift */,
 				F49258F12110FB8E0055FD92 /* ViewController.swift */,
 				F49258F32110FB8E0055FD92 /* Main.storyboard */,
@@ -65,6 +68,14 @@
 				F49258F62110FB8E0055FD92 /* TodoList.xcdatamodeld */,
 			);
 			path = TodoList;
+			sourceTree = "<group>";
+		};
+		F4925907211105EB0055FD92 /* services */ = {
+			isa = PBXGroup;
+			children = (
+				F4925908211105FB0055FD92 /* PersistenceService.swift */,
+			);
+			path = services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4925909211105FB0055FD92 /* PersistenceService.swift in Sources */,
 				F49258F22110FB8E0055FD92 /* ViewController.swift in Sources */,
 				F49258F02110FB8E0055FD92 /* AppDelegate.swift in Sources */,
 				F49258F82110FB8E0055FD92 /* TodoList.xcdatamodeld in Sources */,
