@@ -69,6 +69,12 @@ class ViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    private func removeTodo(row: Int) {
+        PersistenceService.context.delete(self.todos[row])
+        PersistenceService.saveContext()
+        self.todos.remove(at: row)
+    }
+    
 }
 
 extension ViewController : UITableViewDataSource {
@@ -90,4 +96,24 @@ extension ViewController : UITableViewDataSource {
         return cell
     }
 
+}
+
+// MARK: remove todo
+extension ViewController : UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            self.removeTodo(row: indexPath.row)
+        }
+        
+        self.tableView.beginUpdates()
+        self.tableView.deleteRows(at: [indexPath], with: .automatic)
+        self.tableView.endUpdates()
+        
+    }
 }
